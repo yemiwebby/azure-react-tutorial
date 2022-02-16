@@ -43,6 +43,8 @@ jobs:
             az webapp deployment source config-local-git --resource-group DemoApp --name azure-react-tutorial
             cd ~/project/build/
             git init
+            git config --global user.email "me@mail.com"
+            git config --global user.name "yemiwebby"
             git add .
             git commit -m "New update"
             git remote add azure https://$GIT_USERNAME:$GIT_PASSWORD@azure-react-tutorial.scm.azurewebsites.net/azure-react-tutorial.git
