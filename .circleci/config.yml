@@ -37,6 +37,10 @@ jobs:
           at: ~/project
       - run:
           command: az webapp deployment source show --resource-group DemoApp --name azure-react-tutorial
+      - run:
+          name: "Deploy Web App to Azure"
+          command: |
+            az webapp deployment source config-local-git --resource-group DemoApp --name azure-react-tutorial
 workflows:
   build-and-deploy:
     jobs:
